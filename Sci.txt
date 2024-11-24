@@ -1,0 +1,174 @@
+#!/bin/bash
+
+# Create a directory for the data
+mkdir -p plant_data/fruits
+mkdir -p plant_data/vegetables
+
+# Scientific Names of Fruits
+cat <<EOL > plant_data/fruits/fruits.txt
+# Scientific Names of Fruits
+
+1. Apple - Malus domestica
+2. Apricot - Prunus armeniaca
+3. Avocado - Persea americana
+4. Banana - Musa acuminata
+5. Blackberry - Rubus fruticosus
+6. Blueberry - Vaccinium corymbosum
+7. Boysenberry - Rubus ursinus × Rubus idaeus
+8. Cantaloupe - Cucumis melo var. cantalupensis
+9. Cherry - Prunus avium
+10. Clementine - Citrus × clementina
+11. Coconut - Cocos nucifera
+12. Cranberry - Vaccinium macrocarpon
+13. Currant - Ribes
+14. Date - Phoenix dactylifera
+15. Dragon Fruit - Hylocereus undatus
+16. Elderberry - Sambucus
+17. Fig - Ficus carica
+18. Grape - Vitis vinifera
+19. Grapefruit - Citrus × paradisi
+20. Guava - Psidium guajava
+21. Honeydew - Cucumis melo var. inodorus
+22. Kiwi - Actinidia deliciosa
+23. Lemon - Citrus limon
+24. Lime - Citrus aurantiifolia
+25. Lychee - Litchi chinensis
+26. Mango - Mangifera indica
+27. Mulberry - Morus
+28. Nectarine - Prunus persica var. nucipersica
+29. Orange - Citrus × sinensis
+30. Papaya - Carica papaya
+31. Passion Fruit - Passiflora edulis
+32. Peach - Prunus persica
+33. Pear - Pyrus
+34. Pineapple - Ananas comosus
+35. Plum - Prunus domestica
+36. Pomegranate - Punica granatum
+37. Raspberry - Rubus idaeus
+38. Redcurrant - Ribes rubrum
+39. Starfruit - Averrhoa carambola
+40. Strawberry - Fragaria × ananassa
+41. Tangerine - Citrus × reticulata
+42. Watermelon - Citrullus lanatus
+43. Soursop - Annona muricata
+44. Jackfruit - Artocarpus heterophyllus
+45. Persimmon - Diospyros
+46. Salak (Snake Fruit) - Salacca zalacca
+47. Tamarind - Tamarindus indica
+48. Cucumber - Cucumis sativus
+49. Jujube - Ziziphus jujuba
+50. Bilimbi - Averrhoa bilimbi
+51. Kumquat - Fortunella
+52. Olive - Olea europaea
+53. Plantain - Musa acuminata × Musa balbisiana
+54. Quince - Cydonia oblonga
+55. Zucchini - Cucurbita pepo
+56. Medlar - Mespilus germanica
+57. Calamondin - Citrus × calamondin
+58. Nance - Byrsonima crassifolia
+59. Sapote - Pouteria sapota
+60. Dragon Fruit (Yellow) - Hylocereus megalanthus
+61. Cherimoya - Annona cherimola
+62. Pawpaw - Asimina triloba
+63. Durian - Durio
+64. Custard Apple - Annona reticulata
+65. Bitter Melon - Momordica charantia
+66. Langsat - Lansium parasiticum
+67. Rambutan - Nephelium lappaceum
+68. Mangosteen - Garcinia mangostana
+69. Longan - Dimocarpus longan
+70. Santol - Sandoricum koetjape
+71. Ambarella - Spondias dulcis
+72. Cempedak - Artocarpus integer
+73. Chayote - Sechium edule
+74. Elderberry - Sambucus nigra
+75. Salak - Salacca wallichiana
+76. Langsat - Lansium domesticum
+77. Soursop - Annona muricata
+78. Pulasan - Nephelium ramboutan-ake
+79. Jambolan - Syzygium cumini
+80. Jabuticaba - Plinia cauliflora
+81. Bitter Orange - Citrus × aurantium
+82. Calabash - Crescentia cujete
+83. Black Sapote - Diospyros digyna
+84. Ice Cream Bean - Inga edulis
+85. Miracle Fruit - Synsepalum dulcificum
+86. Buddha's Hand - Citrus medica var. sarcodactylis
+87. Kiwano - Cucumis metuliferus
+88. Pitaya - Hylocereus spp.
+89. Salak - Salacca zalacca
+90. Pulasan - Nephelium ramboutan-ake
+91. Chikoo - Manilkara zapota
+92. Water Apple - Syzygium aqueum
+93. Fuyu Persimmon - Diospyros kaki
+94. Shiranui - Citrus reticulata × Citrus sinensis
+95. Marang - Artocarpus odoratissimus
+96. Ceylon Gooseberry - Dovyalis hebecarpa
+97. Indian Gooseberry - Phyllanthus emblica
+98. Mangaba - Hancornia speciosa
+99. Guavaberry - Myrciaria floribunda
+100. Cacao - Theobroma cacao
+EOL
+
+# Scientific Names of Vegetables
+cat <<EOL > plant_data/vegetables/vegetables.txt
+# Scientific Names of Vegetables
+
+1. Artichoke - Cynara cardunculus var. scolymus
+2. Arugula - Eruca sativa
+3. Asparagus - Asparagus officinalis
+4. Beetroot - Beta vulgaris
+5. Bell Pepper - Capsicum annuum
+6. Broccoli - Brassica oleracea var. italica
+7. Brussels Sprouts - Brassica oleracea var. gemmifera
+8. Cabbage - Brassica oleracea var. capitata
+9. Carrot - Daucus carota
+10. Cauliflower - Brassica oleracea var. botrytis
+11. Celery - Apium graveolens
+12. Chard - Beta vulgaris subsp. vulgaris
+13. Chayote - Sechium edule
+14. Chicory - Cichorium intybus
+15. Collard Greens - Brassica oleracea var. viridis
+16. Corn - Zea mays
+17. Cucumber - Cucumis sativus
+18. Eggplant - Solanum melongena
+19. Endive - Cichorium endivia
+20. Fennel - Foeniculum vulgare
+21. Garlic - Allium sativum
+22. Ginger - Zingiber officinale
+23. Green Bean - Phaseolus vulgaris
+24. Green Onion - Allium fistulosum
+25. Kale - Brassica oleracea var. sabellica
+26. Kohlrabi - Brassica oleracea var. gongylodes
+27. Leek - Allium ampeloprasum
+28. Lettuce - Lactuca sativa
+29. Mushrooms - Agaricus bisporus
+30. Mustard Greens - Brassica juncea
+31. Okra - Abelmoschus esculentus
+32. Onion - Allium cepa
+33. Pea - Pisum sativum
+34. Potato - Solanum tuberosum
+35. Radish - Raphanus sativus
+36. Spinach - Spinacia oleracea
+37. Squash - Cucurbita pepo
+38. Sweet Potato - Ipomoea batatas
+39. Swiss Chard - Beta vulgaris subsp. cicla
+40. Tomato - Solanum lycopersicum
+41. Turnip - Brassica rapa
+42. Zucchini - Cucurbita pepo
+43. Napa Cabbage - Brassica rapa subsp. pekinensis
+44. Parsnip - Pastinaca sativa
+45. Rutabaga - Brassica napus
+46. Shallot - Allium ascalonicum
+47. Bamboo Shoot - Phyllostachys edulis
+48. Celeriac - Apium graveolens var. rapaceum
+49. Acorn Squash - Cucurbita pepo
+50. Chard - Beta vulgaris
+51. Sweet Corn - Zea mays
+52. Butternut Squash - Cucurbita moschata
+53. Bell Pepper (Green) - Capsicum annuum
+54. Bell Pepper (Red) - Capsicum annuum
+55. Bell Pepper (Yellow) - Capsicum annuum
+56. Taro - Colocasia esculenta
+57. Cabbage (Savoy) - Brassica oleracea var. sabauda
+58. Cabbage (Napa)
